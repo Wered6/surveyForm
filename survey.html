@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="./resources/css/styles.css" type="text/css" rel="stylesheet" />
+		<title>Board Games</title>
+	</head>
+	<body>
+		<div class="Wrapper">
+			<form
+				class="backgroundForm"
+				id="surveyForm"
+				onsubmit="return false"
+			>
+				<div class="titleForm">
+					<h1 id="title">Survey Form</h1>
+				</div>
+				<div class="dataForm">
+					<table>
+						<tbody>
+							<tr>
+								<td scope="row"><label for="name">Name</label></td>
+								<td>
+									<input
+										type="text"
+										id="name"
+										placeholder="Enter your full name"
+										required
+										class="formInput"
+									/>
+								</td>
+							</tr>
+							<tr>
+								<td scope="row"><label for="email">Email</label></td>
+								<td>
+									<input
+										type="email"
+										id="email"
+										placeholder="Enter your mail"
+										required
+										class="formInput"
+									/>
+								</td>
+							</tr>
+							<tr>
+								<td><label for="Avatar">Avatar</label></td>
+								<td>
+									<input
+										type="file"
+										id="avatar"
+										accept="image/png, image/jpeg"
+										class="formInput"
+									/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="Gender">Gender</label>
+								</td>
+								<td>
+									<div class="formInput">
+										<div class="genderInput">
+											<input
+												type="radio"
+												id="male"
+												name="gender"
+												value="male"
+												checked
+											/>
+											<label for="male">Male</label>
+										</div>
+										<div class="genderInput">
+											<input
+												type="radio"
+												id="female"
+												name="gender"
+												value="female"
+												checked
+											/>
+											<label for="female">Female</label>
+										</div>
+										<div class="genderInput">
+											<input
+												type="radio"
+												id="other"
+												name="gender"
+												value="other"
+												checked
+											/>
+											<label for="other">Other</label>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="message">About me</label>
+								</td>
+								<td>
+									<textarea
+										name="message"
+										id="message"
+										rows="2"
+										placeholder="Tell us few things about you... :)"
+										class="formInput"
+									></textarea>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="accept">Accept rules</label>
+								</td>
+								<td>
+									<input type="checkbox" id="accept" required />
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="age">Date of birth</label>
+								</td>
+								<td>
+									<input type="date" id="age" class="formInput" required />
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="submitButtonForm">
+						<button
+							type="submit"
+							id="submitButton"
+							class="formInput"
+							onclick="goThroughTheForm();"
+						>
+							Submit
+						</button>
+					</div>
+				</div>
+			</form>
+			<div class="backgroundCategories" id="category" style="display: none">
+				<label for="category" class="titleDropDownList"
+					>What category of board games do you prefer?</label
+				>
+				<select class="dropDownList" onchange="showCategories(this);">
+					<option id="blankCategory" value="blankCategory" selected disabled hidden required >
+						Please select an option
+					</option>
+					<option value="abstract">Abstract</option>
+					<option value="area_control">Area Control</option>
+					<option value="campaign/legacy">Campaign/Legacy</option>
+				</select>
+				<div id="abstractCategory" style="display: none">
+					<table>
+						<tbody>
+							<tr>
+								<td>
+									<div class="game">
+										<a
+											class="gameTitle"
+											href="https://www.arcanewonders.com/product/onitama/"
+											>Onitama</a
+										>
+										<p>
+											<span class="inGameTitle">Onitama</span> is a two-player
+											abstract strategy game designed by Seiji Kanai and
+											published by CMON. The game is played on a 5×5 grid, with
+											each player controlling five pieces. The objective of the
+											game is to capture the opponent's master, which is located
+											on the opponent's side of the board. The game is played in
+											turns, with each turn consisting of two phases: the
+											movement phase and the action phase. The movement phase
+											consists of moving one of the player's pieces to an
+											adjacent square. The action phase consists of performing
+											an action with one of the player's pieces. The game ends
+											when one player captures the opponent's master.
+										</p>
+										<div class="gameImagesRow">
+											<img
+												src="./resources/images/abstractCategory/Onitama/Onitama1.jpg"
+											/>
+											<img
+												src="./resources/images/abstractCategory/Onitama/Onitama2.jpg"
+											/>
+										</div>
+										<div class="gameImagesRow">
+											<img
+												src="./resources/images/abstractCategory/Onitama/Onitama3.jpg"
+											/>
+											<img
+												src="./resources/images/abstractCategory/Onitama/Onitama4.jpg"
+											/>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div class="game">
+										<a
+											class="gameTitle"
+											href="https://roxley.com/products/santorini"
+											>Santorini</a
+										>
+										<p>
+											<span class="inGameTitle">Santorini</span> is a strategy
+											game for two players, designed by Gordon Hamilton and
+											published by Roxley Games. The game is played on a 5×5
+											grid, with each player controlling five pieces. The
+											objective of the game is to capture the opponent's master,
+											which is located on the opponent's side of the board. The
+											game is played in turns, with each turn consisting of two
+											phases: the movement phase and the action phase. The
+											movement phase consists of moving one of the player's
+											pieces to an adjacent square. The action phase consists of
+											performing an action with one of the player's pieces. The
+											game ends when one player captures the opponent's master.
+										</p>
+										<div class="gameImagesRow">
+											<img
+												src="./resources/images/abstractCategory/Santorini/Santorini1.jpg"
+											/>
+											<img
+												src="./resources/images/abstractCategory/Santorini/Santorini2.jpg"
+											/>
+										</div>
+										<div class="gameImagesRow">
+											<img
+												src="./resources/images/abstractCategory/Santorini/Santorini3.jpg"
+											/>
+											<img
+												src="./resources/images/abstractCategory/Santorini/Santorini4.jpg"
+											/>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div id="areaControlCategory" style="display: none">
+					<table>
+						<tbody>
+							<tr>
+								<td>
+									<div class="game">
+										<a
+											class="gameTitle"
+											href="https://www.matagot.com/en/catalog/details/expert-games/1/cyclades/795"
+											>Cyclades</a
+										>
+										<p>
+											<span class="inGameTitle">Cyclades</span> is a strategy
+											game for two to five players, designed by Bruno Cathala
+											and Ludovic Maublanc and published by Matagot. The game is
+											set in the ancient Greek world, and is played on a map of
+											the Cyclades islands. The game is played in turns, with
+											each turn consisting of two phases: the movement phase and
+											the action phase. The movement phase consists of moving
+											one of the player's pieces to an adjacent square. The
+											action phase consists of performing an action with one of
+											the player's pieces. The game ends when one player
+											captures the opponent's master.
+										</p>
+										<div class="gameImagesRow">
+											<img
+												src="./resources/images/areaControlCategory/Cyclades/Cyclades1.jpg"
+											/>
+											<img
+												src="./resources/images/areaControlCategory/Cyclades/Cyclades2.jpg"
+											/>
+										</div>
+										<div class="gameImagesRow">
+											<img
+												src="./resources/images/areaControlCategory/Cyclades/Cyclades3.jpg"
+											/>
+											<img
+												src="./resources/images/areaControlCategory/Cyclades/Cyclades4.jpg"
+											/>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div class="game">
+										<a
+											class="gameTitle"
+											href="https://roxley.com/products/santorini"
+											>Tammany Hall</a
+										>
+										<p>
+											<span class="inGameTitle">Tammany Hall</span> is a
+											strategy game for two to five players, designed by Bruno
+											Cathala and Ludovic Maublanc and published by Matagot. The
+											game is set in the ancient Greek world, and is played on a
+											map of the Cyclades islands. The game is played in turns,
+											with each turn consisting of two phases: the movement
+											phase and the action phase. The movement phase consists of
+											moving one of the player's pieces to an adjacent square.
+											The action phase consists of performing an action with one
+											of the player's pieces. The game ends when one player
+											captures the opponent's master.
+										</p>
+										<div class="gameImagesRow">
+											<img
+												src="./resources/images/areaControlCategory/Tammany Hall/TammanyHall1.jpg"
+											/>
+											<img
+												src="./resources/images/areaControlCategory/Tammany Hall/TammanyHall2.jpg"
+											/>
+										</div>
+										<div class="gameImagesRow">
+											<img
+												src="./resources/images/areaControlCategory/Tammany Hall/TammanyHall3.jpg"
+											/>
+											<img
+												src="./resources/images/areaControlCategory/Tammany Hall/TammanyHall4.jpg"
+											/>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div id="campaign/LegacyCategory" style="display: none">
+					<table>
+						<tbody>
+							<tr>
+								<td>
+									<div class="game">
+										<a
+											class="gameTitle"
+											href="https://www.asmodee-digital.com/en/gloomhaven/"
+											>Gloomhaven</a
+										>
+										<p>
+											<span class="inGameTitle">Gloomhaven</span> is a game of
+											Euro-inspired tactical combat in a persistent world of
+											shifting motives. Players will take on the role of a
+											wandering adventurer with their own special set of skills
+											and their own reasons for traveling to this dark corner of
+											the world. Players must work together out of necessity to
+											clear out menacing dungeons and forgotten ruins. In the
+											process they will enhance their abilities with experience
+											and loot, discover new locations to explore and plunder,
+											and expand an ever-branching story fueled by the decisions
+											they make.
+										</p>
+										<div class="gameImagesRow">
+											<img
+												src="./resources/images/campainLegacy/Gloomhaven/Gloomhaven1.jpg"
+											/>
+											<img
+												src="./resources/images/campainLegacy/Gloomhaven/Gloomhaven2.jpg"
+											/>
+										</div>
+										<div class="gameImagesRow">
+											<img
+												src="./resources/images/campainLegacy/Gloomhaven/Gloomhaven3.jpg"
+											/>
+											<img
+												src="./resources/images/campainLegacy/Gloomhaven/Gloomhaven4.jpg"
+											/>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div class="game">
+										<a
+											class="gameTitle"
+											href="https://roxley.com/products/santorini"
+											>Jaws of the Lion</a
+										>
+										<p>
+											<span class="inGameTitle">Jaws of the Lion</span> takes
+											place in the world of Gloomhaven. It is a standalone game
+											that can be played by itself or combined with Gloomhaven.
+											The game is a cooperative game for 1-4 players. The game
+											is set in the same world as Gloomhaven, but it is not
+											necessary to have played Gloomhaven to play Jaws of the
+											Lion. The game is set in the same world as Gloomhaven, but
+											it is not necessary to have played Gloomhaven to play Jaws
+											of the Lion.
+										</p>
+										<div class="gameImagesRow">
+											<img
+												src="./resources/images/campainLegacy/Jaws of the lion/Jawsofthelion1.jpg"
+											/>
+											<img
+												src="./resources/images/campainLegacy/Jaws of the lion/Jawsofthelion2.jpg"
+											/>
+										</div>
+										<div class="gameImagesRow">
+											<img
+												src="./resources/images/campainLegacy/Jaws of the lion/Jawsofthelion3.jpg"
+											/>
+											<img
+												src="./resources/images/campainLegacy/Jaws of the lion/Jawsofthelion4.jpg"
+											/>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<script src="./js/app.js"></script>
+		<footer>
+			<p>Copyright © 2022 Wered</p>
+		</footer>
+	</body>
+</html>
